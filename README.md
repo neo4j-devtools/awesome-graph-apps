@@ -21,7 +21,7 @@ The [Neo4j Desktop Developers](https://neo4j-apps.github.io) page is a great pla
 
 ## Graph-Apps
 
-- [:information_source: Neo4j Browser](https://neo4j.com/developer/guide-neo4j-browser/) [:link: Installation URL](https://neo.jfrog.io/neo/api/npm/npm/neo4j-browser/) - Neo4j's built-in user interface.
-- [:information_source: Neo4j Bloom](https://neo4j.com/bloom/) [:link: Installation URL](https://neo.jfrog.io/neo/api/npm/npm/neo4j-bloom/)- A visual environment for graph exploration, searching, and editing.
-- [:information_source: Your App Here]() [:link: Installation URL](http://replace-this-with-the-npm-package-url-or-a-direct-link-to-the-hosted-app) - copy, paste, edit, then pull-request
+- [Neo4j Browser](https://neo4j.com/developer/guide-neo4j-browser/) | [:link: Install](https://neo.jfrog.io/neo/api/npm/npm/neo4j-browser/) - Neo4j's built-in user interface.
+- [Neo4j Bloom](https://neo4j.com/bloom/) | [:link: Install](https://neo.jfrog.io/neo/api/npm/npm/neo4j-bloom/)- A visual environment for graph exploration, searching, and editing.
+- [Your App Here]() | [:link: Install](http://replace-this-with-the-npm-package-url-or-a-direct-link-to-the-hosted-app) - copy, paste, edit, then pull-request
 
