@@ -23,5 +23,7 @@ The [Neo4j Desktop Developers](https://neo4j-apps.github.io) page is a great pla
 
 - [Neo4j Browser](https://neo4j.com/developer/guide-neo4j-browser/) | [:link: Install](https://neo.jfrog.io/neo/api/npm/npm/neo4j-browser/) - Neo4j's built-in user interface.
 - [Neo4j Bloom](https://neo4j.com/bloom/) | [:link: Install](https://neo.jfrog.io/neo/api/npm/npm/neo4j-bloom/)- A visual environment for graph exploration, searching, and editing.
+- [Query Log Analyzer]() | [:link: Install](https://neo.jfrog.io/neo/api/npm/npm/query-log-analyzer)- Upload and analyze your neo4j query log file.
+- [Neo4j Db Analyzer]() | [:link: Install](https://neo.jfrog.io/neo/api/npm/npm/neo4j-db-analyzer)- Count everyting in the database.
 - [Your App Here]() | [:link: Install](http://replace-this-with-the-npm-package-url-or-a-direct-link-to-the-hosted-app) - copy, paste, edit, then pull-request
 
