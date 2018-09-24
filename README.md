@@ -10,9 +10,18 @@ A Graph-App is a single-page web application designed to work inside of Neo4j De
 
 The [Neo4j Desktop Developers](https://neo4j-apps.github.io) page is a great place to learn more details.
 
+## How do I install a listed Graph-App?
+
+1. Look for an awesome Graph-App below
+2. Copy the url attached to the :link: icon
+3. Run Neo4j Desktop
+4. Open the "Graph-Apps" sidebar
+5. Paste the link into the "Install Graph-App" section at the bottom
+6. Click "Install"
+
 ## Graph-Apps
 
-- [Neo4j Browser](https://neo4j.com/developer/guide-neo4j-browser/) - Neo4j's built-in user interface.
-- [Neo4j Bloom](https://neo4j.com/bloom/) - A visual environment for graph exploration, searching, and editing.
-- [Your App Here]() - copy, paste, edit, then pull-request
+- [Neo4j Browser](https://neo4j.com/developer/guide-neo4j-browser/) [:link](https://neo.jfrog.io/neo/api/npm/npm/neo4j-browser/) - Neo4j's built-in user interface.
+- [Neo4j Bloom](https://neo4j.com/bloom/) [:link:](https://neo.jfrog.io/neo/api/npm/npm/neo4j-bloom/)- A visual environment for graph exploration, searching, and editing.
+- [Your App Here]() [:link:](http://replace-this-with-the-npm-package-url-or-a-direct-link-to-the-hosted-app) - copy, paste, edit, then pull-request
 
