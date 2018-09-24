@@ -6,7 +6,7 @@ Curated list of Graph-Apps that work with Neo4j Desktop.
 
 ## What's a Graph-App?
 
-A Graph-App is a single-page web application designed to work inside of Neo4j Desktop, which is an Electron-based application that provides an API for
+A Graph-App is a single-page web application designed to work inside of Neo4j Desktop, which is an Electron-based application that provides an API for discovering and connecting to Neo4j graphs.
 
 The [Neo4j Desktop Developers](https://neo4j-apps.github.io) page is a great place to learn more details.
 
