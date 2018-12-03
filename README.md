@@ -29,9 +29,9 @@ The [Neo4j Desktop Developers](https://neo4j-apps.github.io) page is a great pla
 
 ### Developed by Field-Team, Partners, Users
 
-- [Query Log Analyzer]() | [:link: Install](https://neo.jfrog.io/neo/api/npm/npm/query-log-analyzer)- Upload and analyze your neo4j query log file.
+- [Query Log Analyzer](https://medium.com/neo4j/meet-the-query-log-analyzer-30b3eb4b1d6) | [:link: Install](https://neo.jfrog.io/neo/api/npm/npm/query-log-analyzer)- Upload and analyze your neo4j query log file.
 - [Neo4j Db Analyzer]() | [:link: Install](https://neo.jfrog.io/neo/api/npm/npm/neo4j-db-analyzer)- Database metadata visualizer.
-- [Graph Gallery](https://portal.graphgist.org) | [:link: Install](https://r.neo4j.com/gallery-app)- Wide range of community provided example graphs, ready to run in your local database.
+- [Graph Gallery](https://medium.com/neo4j/meet-the-graph-gallery-3666a127efee) | [:link: Install](https://r.neo4j.com/gallery-app)- Wide range of community provided example graphs, ready to run in your local database.
 
 - [Your App Here]() | [:link: Install](http://replace-this-with-the-npm-package-url-or-a-direct-link-to-the-hosted-app) - copy, paste, edit, then pull-request.
 
