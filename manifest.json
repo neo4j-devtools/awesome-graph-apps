@@ -1,0 +1,30 @@
+{
+    "short_name": "GraphAppsGallery",
+    "name": "Neo4j Desktop Graph Apps Gallery",
+    "description":"Curated list of Graph-Apps that work with Neo4j Desktop",
+    "permissions": [],
+    "icons": [
+      {
+        "src": "favicon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }
+    ],
+    "neo4jDesktop": {
+      "apiVersion": "^1.2.0"
+    },
+    "start_url": "./index.html",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "homepage": "https://github.com/neo4j-apps/awesome-graph-apps",
+    "hostpage": "https://install.graphapp.io/",
+    "categories": ["graphapp"],
+    "related_applications": [
+        {
+          "platform": "neo4j",
+          "url": "https://github.com/neo4j/neo4j-browser/",
+          "id": "@neo4j/neo4j-browser"
+        }
+      ]
+  }
