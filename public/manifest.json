@@ -1,6 +1,6 @@
 {
     "short_name": "GraphAppsGallery",
-    "name": "Neo4j Desktop Graph Apps Gallery",
+    "name": "Graph Apps Gallery",
     "description":"Curated list of Graph-Apps that work with Neo4j Desktop",
     "permissions": [],
     "icons": [
