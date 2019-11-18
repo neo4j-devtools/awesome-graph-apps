@@ -1,0 +1,43 @@
+{
+  "name": "@neo4j-apps/awesome-graph-apps",
+  "version": "1.0.0",
+  "description": "Curated list of Graph-Apps that work with Neo4j Desktop.",
+  "homepage": "https://github.com/neo4j-apps/awesome-graph-apps",
+  "main": "dist/index.html",
+  "neo4jDesktop": {
+    "apiVersion": "^1.2.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "build": "rm -rf dist && cp -r public dist",
+    "deploy": "git subtree push --prefix public graph-app origin",
+    "release": "np patch"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neo4j-apps/awesome-graph-apps.git"
+  },
+  "keywords": [
+    "graph-app",
+    "neo4j"
+  ],
+  "author": "Neo4j Labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neo4j-apps/awesome-graph-apps/issues"
+  },
+	"devDependencies": {
+		"np": "*"
+	},
+  "np": {
+		"yarn": false,
+		"contents": "dist"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+
+}
