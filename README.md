@@ -35,3 +35,7 @@ The [Neo4j Desktop Developers](https://neo4j-apps.github.io) page is a great pla
 
 - [Your App Here]() | [:link: Install](http://replace-this-with-the-npm-package-url-or-a-direct-link-to-the-hosted-app) - copy, paste, edit, then pull-request.
 
+## How do I add a new Graph App?
+
+* Add it to `public/index.html`
+* Run `yarn deploy`
