@@ -1,4 +1,4 @@
-[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+https://awesome.re[image::https://awesome.re/badge.svg[]]
 
 # awesome-graph-apps
 Curated list of Graph-Apps that work with Neo4j Desktop.
