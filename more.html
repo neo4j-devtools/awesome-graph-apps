@@ -36,24 +36,41 @@ body {
 </div>
 
 <script type="text/javascript">
-    var connectionData={};
-    function loaded() {
-    const query=window.location.href.split("?")[1];
-    if (query) {
-        const parts=query.split("&").forEach(e => {
-            const [name, value] = e.split("=");
-            document.getElementsByName(name)[0].setAttribute("value",value);
-            const anchors = document.getElementsByTagName("a");
+    var connectionData={url:"neo4j://localhost",username:"neo4j",database:"neo4j",password:""};
+    function replacePreviousValue(anchor, prevValue, value) {
+            if (anchor.getAttribute("href").indexOf("="+prevValue) != -1) {
+                anchor.setAttribute("href", anchor.getAttribute("href").replace("="+prevValue,"="+encodeURIComponent(value)));
+            }
+        }
+    // perhaps better to fetch the information form the form on-click of the anchor link
+    function onFormChange() {
+        console.log("onFormChange");
+        for (const name in connectionData) {
+            const value=document.getElementsByName(name)[0].value;
+            console.log(name, document.getElementsByName(name),value);
+            const anchors=document.getElementsByTagName("a");
             for (var i=0;i<anchors.length;i++) {
-                const anchor = anchors[i];
-                if (anchor.getAttribute("href").indexOf("$"+name) != -1) {
-                    anchor.setAttribute("href", anchor.getAttribute("href").replace("$"+name,encodeURIComponent(value)));
-                    // todo react to form changes - figure out how to replace the previous value
-                }
+                const anchor=anchors[i];
+                replacePreviousValue(anchor, encodeURIComponent(connectionData[name]), value);
+                replacePreviousValue(anchor, "$"+name, value);
             }
             connectionData[name]=value;
-        });
-    }}
+        }
+    }
+    function loaded() {
+        const query=window.location.href.split("?")[1];
+        if (query) {
+            const parts=query.split("&").forEach(e => {
+                const [name, value] = e.split("=");
+                if (connectionData.hasOwnProperty(name)) {
+                    document.getElementsByName(name)[0].value=value;
+                    connectionData[name]=value;
+                }
+            });
+        }
+        document.getElementsByTagName("form")[0].addEventListener('change',() => onFormChange());
+        onFormChange();
+    }
 </script>
 
 <div class="ui items container padded four column aligned segment">
@@ -140,7 +157,7 @@ body {
             </div>
             <div class="meta">Neo4j, Inc.</div>
             <div class="center aligned  column">
-                <a target="_blank" href="https://data-importer.neo4j.io?dbms=$url&user=$user&pass=$password">
+                <a target="_blank" href="https://data-importer.neo4j.io?dbms=$url&user=$username&pass=$password">
                 <image class="tiny ui image" src="images/neo4j-data-importer-logo.svg"></image>
                 </a>
             </div>
@@ -157,7 +174,7 @@ body {
         </div>
         <div class="extra content center aligned column">
             <div class="ui buttons">
-                <a class="ui basic blue button" target="_blank" href="https://data-importer.neo4j.io?dbms=$url&user=$user&pass=$password">Open</a>
+                <a class="ui basic blue button" target="_blank" href="https://data-importer.neo4j.io?dbms=$url&user=$username&pass=$password">Open</a>
             </div>
         </div>
     </div>
@@ -196,7 +213,7 @@ body {
             </div>
             <div class="meta">Niels De Jong (Neo4j)</div>
             <div class="center aligned  column">
-                <a target="_blank" href="https://neodash.graphapp.io?dbms=$url&db=$database&user=$user">
+                <a target="_blank" href="https://neodash.graphapp.io?dbms=$url&db=$database&user=$username">
                 <image class="tiny ui image" src="images/neodash-icon.png"></image>
                 </a>
             </div>
@@ -212,7 +229,7 @@ body {
         </div>
         <div class="extra content center aligned column">
             <div class="ui buttons ">
-                <a class="ui basic blue button" target="_blank" href="https://neodash.graphapp.io?dbms=$url&db=$database&user=$user">Open</a>
+                <a class="ui basic blue button" target="_blank" href="https://neodash.graphapp.io?dbms=$url&db=$database&user=$username">Open</a>
             </div>
         </div>
     </div>
