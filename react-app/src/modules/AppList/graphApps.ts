@@ -21,7 +21,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'neo4j-browser',
     name: 'Neo4j Browser',
-    baseUrl: 'https://browser.neo4j.io',
+    baseUrl: 'https://browser.neo4j.io/?connectionUrl=$connectionUrl&username=$username&password=$password&database=$database',
     author: 'Neo4j, Inc',
     description: 'A browser-based application for exploring Neo4j data.',
     logo: browserLogo,

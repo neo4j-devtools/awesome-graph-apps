@@ -7,8 +7,9 @@ import Header from "./modules/Header/Header";
 
 const getFormDefaultValues = () => {
   const returnValue: any = {};
+  const search = new URLSearchParams(window.location.search);
   formFields.forEach((field) => {
-    returnValue[field.name] = field.defaultValue;
+    returnValue[field.name] = search.get(field.name) || field.defaultValue;
   });
   return returnValue;
 };

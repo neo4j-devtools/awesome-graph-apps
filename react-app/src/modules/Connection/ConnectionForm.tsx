@@ -17,7 +17,7 @@ function ConnectionForm(props: Props) {
             onChange={onChange}
             key={field.name}
             label={field.label}
-            type="text"
+            type={field.type || "text"}
             name={field.name}
             value={formValues[field.name]}
           />

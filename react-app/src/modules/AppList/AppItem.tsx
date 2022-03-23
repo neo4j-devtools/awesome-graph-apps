@@ -11,6 +11,14 @@ interface Props {
 function AppItem(props: Props) {
   const { app, formValues } = props;
 
+  const getAppUrl = (url: string) => {
+    return url
+      .replace("$connectionUrl", formValues.connectionUrl || "")
+      .replace("$username", formValues.username || "")
+      .replace("$password", formValues.password || "")
+      .replace("$database", formValues.database || "");
+  };
+
   return (
     <div className="card p-0">
       <div className="p-8 flex flex-col gap-y-4 text-center">
@@ -34,11 +42,7 @@ function AppItem(props: Props) {
       </div>
       <div className="flex flex-col gap-y-4 text-center py-4">
         <div>
-          <Button
-            fill="outlined"
-            href={`${app.baseUrl}/?connectionUrl=${formValues.connectionUrl}`}
-            target="_blank"
-          >
+          <Button fill="outlined" href={getAppUrl(app.baseUrl)} target="_blank">
             Open
           </Button>
         </div>
