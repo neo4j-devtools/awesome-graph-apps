@@ -27,7 +27,7 @@ function AppItem(props: Props) {
           <p className="n-text-neutral-60">{app.author}</p>
         </div>
         <div className="mx-auto">
-          <img className="w-24" src={app.logo} />
+          <img className="w-24" src={app.logo} alt="app logo" />
         </div>
       </div>
       <div>

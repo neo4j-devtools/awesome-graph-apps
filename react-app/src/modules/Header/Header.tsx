@@ -1,10 +1,6 @@
 import React from "react";
 
-interface Props {}
-
-function Header(props: Props) {
-  const {} = props;
-
+function Header() {
   return (
     <div>
       <h1 className="h2">Neo4j Graph Apps</h1>

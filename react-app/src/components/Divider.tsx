@@ -1,10 +1,6 @@
 import React from "react";
 
-interface Props {}
-
-function Divider(props: Props) {
-  const {} = props;
-
+function Divider() {
   return <hr className="border-neutral-40" />;
 }
 
