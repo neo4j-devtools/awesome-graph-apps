@@ -1,0 +1,520 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Neo4j Graph Apps - Curated Set Of Online Graph Tools">
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@neo4j" />
+<meta name="twitter:title" content="Neo4j Graph Apps - Curated Set Of Online Graph Tools" />
+<meta name="twitter:description" content="Neo4j Graph Apps - Curated Set Of Online Graph Tools" />
+<meta name="twitter:image" content="https://more.graphapp.io/images/graph-apps.png" />
+
+
+<title>Neo4j Graph Apps Gallery</title>
+
+<!--script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+
+<style>
+body {
+  background-color: #f1f1f1;
+  margin: 2em;
+}
+
+.ui.cards,.ui.items {
+  margin: 5px;
+}
+</style>
+
+</head>
+
+<body onload="loaded();">
+
+<div class="ui items">
+    <h1 class="ui center aligned icon header">Neo4j Graph Apps - Curated Set Of Online Graph Tools</h1>
+</div>
+
+<script type="text/javascript">
+    var connectionData={};
+    function loaded() {
+    const query=window.location.href.split("?")[1];
+    if (query) {
+        const parts=query.split("&").forEach(e => {
+            const [name, value] = e.split("=");
+            document.getElementsByName(name)[0].setAttribute("value",value);
+            const anchors = document.getElementsByTagName("a");
+            for (var i=0;i<anchors.length;i++) {
+                const anchor = anchors[i];
+                if (anchor.getAttribute("href").indexOf("$"+name) != -1) {
+                    anchor.setAttribute("href", anchor.getAttribute("href").replace("$"+name,encodeURIComponent(value)));
+                    // todo react to form changes - figure out how to replace the previous value
+                }
+            }
+            connectionData[name]=value;
+        });
+    }}
+</script>
+
+<div class="ui items container padded four column aligned segment">
+	<div class="item">
+	    <div class="content">
+	      <div class="description">
+			<p>
+				The apps below are additions to Neo4j that provide new capabilities, like Monitoring, Import, Analysis, Running Graph Algorithms, Visualization and much more
+			</p>
+            <form>
+                <label for="url">Connection-URL: </label><input name="url" type="url" value="neo4j://localhost"/>
+                <label for="username">Username: </label><input name="username" type="text" value="neo4j"/>
+                <label for="password">Password: </label><input name="password" type="password" value=""/>
+                <label for="database">Database: </label><input name="database" type="text" value="neo4j"/>
+            </form>
+	      </div>
+	    </div>
+	  </div>
+</div>
+
+<div class="ui cards container center aligned grid three column stackable doubling">
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                Neo4j Bloom
+            </div>
+            <div class="meta">Neo4j, Inc.</div>
+            <div class="center aligned  column">
+                <a target="_blank" href="https://bloom.neo4j.io?connectURL=$url&db=$database">
+                <image class="tiny ui image" src="images/neo4j-bloom-logo.svg"></image>
+                </a>
+            </div>
+            <div class="description">
+                Visual no-code graph exploration tool.
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://neo4j.com/bloom"><i class="info icon" title="Bloom Page"></i></a>
+        	<a target="_blank" href="https://neo4j-bloom.canny.io/feature-requests"><i class="question icon" title="feedback"></i></a>
+        	<a target="_blank" href="https://neo4j-bloom.canny.io/changelog"><i class="volume up icon" title="changelog"></i></a>
+        	<a target="_blank" href="https://neo4j.com/docs/bloom-user-guide"><i class="book icon" title="docs"></i></a>
+        	<a target="_blank" href="https://github.com/neo4j-devtools/neo4j-bloom"><i class="code icon" title="repository"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons">
+                <a class="ui basic blue button" target="_blank" href="https://bloom.neo4j.io?connectURL=$url&db=$database">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                Neo4j Browser
+            </div>
+            <div class="meta">Neo4j, Inc.</div>
+            <div class="center aligned  column">
+                <a target="_blank" href="https://browser.neo4j.io?connectURL=$url&db=$database">
+                <image class="tiny ui image" src="images/neo4j-browser-logo.svg"></image>
+                </a>
+            </div>
+            <div class="description">
+                Build and run Cypher queries on your graph data
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://neo4j.com/product/developer-tools/#browser"><i class="info icon" title="Browser Page"></i></a>
+        	<a target="_blank" href="https://neo4j-browser.canny.io/feature-requests"><i class="question icon" title="feedback"></i></a>
+        	<a target="_blank" href="https://neo4j-browser.canny.io/changelog"><i class="volume up icon" title="changelog"></i></a>
+        	<a target="_blank" href="https://neo4j.com/docs/browser-manual"><i class="book icon" title="docs"></i></a>
+        	<a target="_blank" href="https://github.com/neo4j-devtools/neo4j-browser"><i class="code icon" title="repository"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons">
+                <a class="ui basic blue button" target="_blank" href="https://browser.neo4j.io?connectURL=$url&db=$database">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                Neo4j Data Importer
+            </div>
+            <div class="meta">Neo4j, Inc.</div>
+            <div class="center aligned  column">
+                <a target="_blank" href="https://data-importer.neo4j.io?dbms=$url&user=$user&pass=$password">
+                <image class="tiny ui image" src="images/neo4j-data-importer-logo.svg"></image>
+                </a>
+            </div>
+            <div class="description">
+                Model and import data from flat CSV files into Neo4j
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://neo4j.com/product/developer-tools/#browser"><i class="info icon" title="Browser Page"></i></a>
+        	<a target="_blank" href="https://neo4j-browser.canny.io/feature-requests"><i class="question icon" title="feedback"></i></a>
+        	<a target="_blank" href="https://neo4j-browser.canny.io/changelog"><i class="volume up icon" title="changelog"></i></a>
+        	<a target="_blank" href="https://neo4j.com/docs/browser-manual"><i class="book icon" title="docs"></i></a>
+        	<a target="_blank" href="https://github.com/neo4j-devtools/neo4j-browser"><i class="code icon" title="repository"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons">
+                <a class="ui basic blue button" target="_blank" href="https://data-importer.neo4j.io?dbms=$url&user=$user&pass=$password">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                Graph Gallery
+            </div>
+            <div class="meta">Neo4j Labs</div>
+            <div class="center aligned  column">
+                <a target="_blank" href="https://portal.graphgist.org">
+                <image class="tiny ui image" src="images/graph-gallery.png"></image>
+                </a>
+            </div>
+            <div class="description">
+                Interactive Graph Examples
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://github.com/neo4j-apps/graph-examples"><i class="code icon" title="repository"></i></a>
+        	<a target="_blank" href="https://medium.com/neo4j/meet-the-graph-gallery-3666a127efee"><i class="newspaper outline icon" title="article Meet the Graph Gallery"></i></a>
+        </div>
+
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button" target="_blank" href="https://portal.graphgist.org">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                NeoDash
+            </div>
+            <div class="meta">Niels De Jong (Neo4j)</div>
+            <div class="center aligned  column">
+                <a target="_blank" href="https://neodash.graphapp.io?dbms=$url&db=$database&user=$user">
+                <image class="tiny ui image" src="images/neodash-icon.png"></image>
+                </a>
+            </div>
+            <div class="description">
+                Neo4j Dashboard Builder
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://nielsdejong.nl"><i class="user icon" title="Niels De Jong"></i></a>
+        	<a target="_blank" href="https://github.com/nielsdejong/neodash/"><i class="code icon" title="repository"></i></a>
+        	<a target="_blank" href="https://github.com/nielsdejong/neodash/blob/master/README.md"><i class="book icon" title="docs"></i></a>
+        	<a target="_blank" href="https://medium.com/neo4j/neodash-2-0-a-brand-new-way-to-visualize-neo4j-ec8dee689e9b"><i class="newspaper outline icon" title="NeoDash 2.0"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button" target="_blank" href="https://neodash.graphapp.io?dbms=$url&db=$database&user=$user">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                Graph Algorithms Playground
+            </div>
+            <div class="meta">Neo4j Labs</div>
+            <div class="center aligned  column">
+                <a href="https://neuler.graphapp.io">
+                <image class="tiny ui image" src="images/neuler.png"></image>
+                </a>
+            </div>
+            <div class="description">
+                Playground for Neo4j Graph Data Science
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://github.com/neo4j-devtools/neuler"><i class="code icon" title="repository"></i></a>
+            <a target="_blank" href="https://github.com/neo4j-devtools/neuler/issues"><i class="question icon" title="feedback"></i></a>
+        	<a target="_blank" href="https://neo4j.com/developer/graph-data-science/neuler-no-code-graph-algorithms/"><i class="book icon" title="docs"></i></a>
+        	<a target="_blank" href="https://medium.com/neo4j/introducing-neuler-the-graph-algorithms-playground-d81042cfcd56"><i class="newspaper outline icon" title="article"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button" target="_blank" href="https://neuler.graphapp.io">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                Charts
+            </div>
+            <div class="meta">Neo4j Labs</div>
+            <div class="center aligned  column">
+                <image class="tiny ui image" src="images/charts-logo.png"></image>
+            </div>
+            <div class="description">
+                Build Charts from your Graphs
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://twitter.com/adamcowley"><i class="user icon" title="Adam Cowley"></i></a>
+        	<a target="_blank" href="https://github.com/neo4j-labs/charts"><i class="code icon" title="repository"></i></a>
+        	<a target="_blank" href="https://medium.com/neo4j/creating-charts-from-your-graphs-2f5b4e86fd6c"><i class="newspaper outline icon" title="Creating Charts from your Graphs"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button" target="_blank" href="https://charts.graphapp.io">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <!--div class="card">
+        <div class="content">
+            <div class="header">
+                Halin
+            </div>
+            <div class="meta">Neo4j Labs</div>
+            <div class="center aligned  column">
+                <a href="https://halin.graphapp.io">
+                <image class="tiny ui image" src="images/halin.png"></image>
+                </a>
+            </div>
+            <div class="description">
+                Halin helps you monitor and improve your Neo4j graph
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://twitter.com/mdavidallen"><i class="user icon" title="David Allen"></i></a>
+        	<a target="_blank" href="https://github.com/moxious/halin"><i class="code icon" title="repository"></i></a>
+        	<a target="_blank" href="https://medium.com/neo4j/monitoring-neo4j-with-halin-4c11429b46ff"><i class="newspaper outline icon" title="article"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button" target="_blank" href="https://halin.graphapp.io">Open</a>
+            </div>
+        </div>
+    </div-->
+
+
+
+
+    <!--div class="card">
+        <div class="content">
+            <div class="header">
+                Query Log Analyzer
+            </div>
+            <div class="meta">Kees Vegter (Neo4j)</div>
+            <div class="center aligned  column">
+                <image class="tiny ui image" src="images/qloganalyzer_icon.png"></image>
+            </div>
+            <div class="description">
+                Neo4j Query Log Analyzer
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://medium.com/@kees.vegter"><i class="user icon" title="Kees Vegter"></i></a>
+        	<a target="_blank" href="https://github.com/kvegter/query-analyzer-app"><i class="code icon" title="repository"></i></a>
+        	<a target="_blank" href="https://medium.com/neo4j/meet-the-query-log-analyzer-30b3eb4b1d6"><i class="newspaper outline icon" title="article Meet the Query Log Analyzer"></i></a>
+        	<a target="_blank" href="https://github.com/kvegter/query-analyzer-app/blob/master/README.md"><i class="file alternate icon" title="docs"></i></a>
+        	<a target="_blank" href="https://neo.jfrog.io/neo/api/npm/npm/query-log-analyzer"><i class="archive icon" title="install link for neo4j sidebar"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button"  href="neo4j://graphapps/install?url=https://neo.jfrog.io/neo/api/npm/npm/query-log-analyzer">Install</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                Neo4j Db Analyzer
+            </div>
+            <div class="meta">Kees Vegter (Neo4j)</div>
+            <div class="center aligned  column">
+                <image class="tiny ui image" src="images/dbcountreport_icon.png"></image>
+            </div>
+            <div class="description">
+                Count everything in the database
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://medium.com/@kees.vegter"><i class="user icon" title="Kees Vegter"></i></a>
+        	<a target="_blank" href="https://github.com/kvegter/dbreportapp"><i class="code icon" title="repository"></i></a>
+        	<a target="_blank" href="https://medium.com/neo4j/introducing-the-neo4j-database-analyzer-a989b85e4026"><i class="newspaper outline icon" title="article Meet the Database Analyzer"></i></a>
+        	<a target="_blank" href="https://github.com/kvegter/dbreportapp/blob/master/README.md"><i class="file alternate icon" title="docs"></i></a>
+        	<a target="_blank" href="https://neo.jfrog.io/neo/api/npm/npm/neo4j-db-analyzer"><i class="archive icon" title="install link for neo4j sidebar"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button"  href="neo4j://graphapps/install?url=https://neo.jfrog.io/neo/api/npm/npm/neo4j-db-analyzer">Install</a>
+
+            </div>
+        </div>
+    </div-->
+
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                GraphXR
+            </div>
+            <div class="meta">Kineviz</div>
+            <div class="center aligned  column">
+                <a target="_blank" href="https://graphxr.kineviz.com/">
+                <image class="tiny ui image" src="images/graphxr.png"></image>
+                </a>
+            </div>
+            <div class="description">
+                GraphXR is a browser-based visualization tool.
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://kineviz.com/"><i class="user icon" title="Kineviz"></i></a>
+        	<a target="_blank" href="https://neo4j.com/blog/graphxr-graph-app-neo4j-desktop/"><i class="newspaper outline icon" title="article GraphXR Desktop App"></i></a>
+        </div>
+
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button" target="_blank" href="https://graphxr.kineviz.com/">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                yFiles Neo4j Explorer
+            </div>
+            <div class="meta">yWorks</div>
+            <div class="center aligned  column">
+                <a target="_blank" href="https://www.yworks.com/neo4j-explorer/">
+                <image class="tiny ui image" src="images/yworks.png"></image>
+                </a>
+            </div>
+            <div class="description">
+                Explore your Neo4j database
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://yworks.com"><i class="user icon" title="yWorks"></i></a>
+        	<a target="_blank" href="https://www.yworks.com/blog/neo4j-node-design"><i class="newspaper outline icon" title="yFiles Neo4j Explorer Intro and Styling"></i></a>
+        </div>
+
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button" target="_blank" href="https://www.yworks.com/neo4j-explorer/">Open</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="content">
+            <div class="header">
+                Neo4j Commander 3
+            </div>
+            <div class="meta">Netbiz Global</div>
+            <div class="center aligned  column">
+                <a  target="_blank" href="https://neo4jcommander.com/">
+                <image class="tiny ui image" src="images/commander.png"></image>
+                </a>
+            </div>
+            <div class="description">
+                Edit, Clone, Merge, Calculate, Undo, Bookmarks, Export and much more
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://netbizltd.com/"><i class="user icon" title="netbiz global"></i></a>
+        	<a target="_blank" href="https://medium.com/neo4j/editing-data-in-neo4j-graphs-doesnt-have-to-be-hard-8e9791c731bc"><i class="newspaper outline icon" title="article Introducing Neo4j Commander: Editing data in Neo4j Graphs doesn't have to be hard"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button"  target="_blank" href="https://neo4jcommander.com/">Open</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--div class="card">
+        <div class="content">
+            <div class="header">
+                Graphlytic Desktop
+            </div>
+            <div class="meta">Demtec</div>
+            <div class="center aligned  column">
+                <image class="tiny ui image" src="images/graphlytic.svg"></image>
+            </div>
+            <div class="description">
+                Graph Visualization &amp; Analytics
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://twitter.com/graphlytic"><i class="user icon" title="Graphlytic"></i></a>
+        	<a target="_blank" href="https://graphlytic.biz/blog/how-to-install-graphlytic-in-neo4j-desktop"><i class="newspaper outline icon" title="installation article and documentation"></i></a>
+        	<a target="_blank" href="https://npm.graphlytic.biz/graphlytic-desktop"><i class="archive icon" title="install link for neo4j sidebar"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button"  href="neo4j://graphapps/install?url=https://npm.graphlytic.biz/graphlytic-desktop">Install</a>
+            </div>
+        </div>
+    </div-->
+
+    <!--div class="card">
+        <div class="content">
+            <div class="header">
+                NeoMap Map Visualizer
+            </div>
+            <div class="meta">Estelle Scifo</div>
+            <div class="center aligned  column">
+                <image class="tiny ui image" src="images/neomap.png"></image>
+            </div>
+            <div class="description">
+                Visualize spatial data as markers or heatmap in layers on a map
+            </div>
+        </div>
+        <div class="content">
+        	<a target="_blank" href="https://twitter.com/@st3llasia"><i class="user icon" title="Estelle Scifo"></i></a>
+        	<a target="_blank" href="https://github.com/stellasia/neomap"><i class="code icon" title="repository"></i></a>
+        	<a target="_blank" href="https://medium.com/neo4j/introducing-neomap-a-neo4j-desktop-application-for-spatial-data-3e14aad59db2"><i class="newspaper outline icon" title="article Introducing Neomap, a Neo4j Desktop application for spatial data"></i></a>
+        	<a target="_blank" href="https://github.com/stellasia/neomap/blob/master/README.md"><i class="file alternate icon" title="docs"></i></a>
+        	<a target="_blank" href="https://github.com/stellasia/neomap/releases/"><i class="archive icon" title="download link for neo4j sidebar"></i></a>
+        </div>
+        <div class="extra content center aligned column">
+            <div class="ui buttons ">
+                <a class="ui basic blue button"  target="_blank" href="https://github.com/stellasia/neomap/releases/latest">Download Release</a>
+            </div>
+        </div>
+    </div-->
+
+</div>
+<div>
+<!-- Google Universal Tracker -->
+<script type="text/javascript">
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement
+(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a
+,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  //Allow Linker
+  ga('create', 'UA-1192232-34','auto', {'allowLinker': true});
+  //Optimize snippet
+  ga('require', 'GTM-PNLTLM5');
+  ga('send', 'pageview');
+
+  // Load the plugin.
+  ga('require', 'linker');
+
+  // Define which domains to autoLink.
+  ga('linker:autoLink', ['neo4j.org','neo4j.com','neotechnology.com','graphdatabases.com','graphconnect.com']);
+</script>
+<!-- End Google Universal Tracker -->
+
+</body>
+
+</html>
