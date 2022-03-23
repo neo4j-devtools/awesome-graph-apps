@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-neutral-30;
+}
+
+@layer base {
+  .input-wrapper {
+    @apply inline-flex flex-col gap-y-1;
+  }
+  input {
+    @apply border border-neutral-50 rounded-md px-3 py-2;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-neutral-10;
+    @apply rounded-lg;
+    @apply p-8;
+  }
+}
