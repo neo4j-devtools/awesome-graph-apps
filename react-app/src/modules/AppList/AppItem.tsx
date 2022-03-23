@@ -5,10 +5,11 @@ import { GraphAppItem } from "./graphApps";
 
 interface Props {
   app: GraphAppItem;
+  formValues: any;
 }
 
 function AppItem(props: Props) {
-  const { app } = props;
+  const { app, formValues } = props;
 
   return (
     <div className="card p-0">
@@ -18,7 +19,7 @@ function AppItem(props: Props) {
           <p className="n-text-neutral-60">{app.author}</p>
         </div>
         <div className="mx-auto">
-          <img className="w-32" src={app.logo} />
+          <img className="w-24" src={app.logo} />
         </div>
       </div>
       <div>
@@ -33,7 +34,13 @@ function AppItem(props: Props) {
       </div>
       <div className="flex flex-col gap-y-4 text-center py-4">
         <div>
-          <Button fill="outlined">Open</Button>
+          <Button
+            fill="outlined"
+            href={`${app.baseUrl}/?connectionUrl=${formValues.connectionUrl}`}
+            target="_blank"
+          >
+            Open
+          </Button>
         </div>
       </div>
     </div>
