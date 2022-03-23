@@ -38,7 +38,8 @@ body {
 <script type="text/javascript">
     var connectionData={url:"neo4j://localhost",username:"neo4j",database:"neo4j",password:""};
     function replacePreviousValue(anchor, prevValue, value) {
-            if (anchor.getAttribute("href").indexOf("="+prevValue) != -1) {
+        if (prevValue==="" || prevValue===undefined) return;    
+        if (anchor.getAttribute("href").indexOf("="+prevValue) != -1) {
                 anchor.setAttribute("href", anchor.getAttribute("href").replace("="+prevValue,"="+encodeURIComponent(value)));
             }
         }
