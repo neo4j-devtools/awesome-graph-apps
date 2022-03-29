@@ -10,7 +10,7 @@ interface Props {
 function ConnectionForm(props: Props) {
   const { formValues, onChange } = props;
   return (
-    <div className="grid grid-cols-4 gap-x-8">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-8">
       {formFields.map((field) => {
         return (
           <Input

@@ -13,7 +13,7 @@ function AppItem(props: Props) {
 
   const getAppUrl = (url: string) => {
     return url
-      .replace("$connectionUrl", formValues.connectionUrl || "")
+      .replace("$url", formValues.connectionUrl || "")
       .replace("$username", formValues.username || "")
       .replace("$password", formValues.password || "")
       .replace("$database", formValues.database || "");

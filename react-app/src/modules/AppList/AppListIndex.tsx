@@ -10,7 +10,7 @@ function AppListIndex(props: Props) {
   const { formValues } = props;
 
   return (
-    <div className="grid grid-cols-3 gap-x-12">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-12">
       {graphApps.map((graphApp) => (
         <AppItem app={graphApp} key={graphApp.id} formValues={formValues} />
       ))}
