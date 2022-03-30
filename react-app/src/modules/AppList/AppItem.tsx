@@ -23,11 +23,11 @@ function AppItem(props: Props) {
     <div className="card p-0">
       <div className="p-8 flex flex-col gap-y-4 text-center">
         <div>
-          <h5>{app.name}</h5>
+          <h6>{app.name}</h6>
           <p className="n-text-neutral-60">{app.author}</p>
         </div>
         <div className="mx-auto">
-          <img className="w-24" src={app.logo} alt="app logo" />
+          <img className="w-16" src={app.logo} alt="app logo" />
         </div>
       </div>
       <div>

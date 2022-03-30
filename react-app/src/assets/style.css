@@ -4,7 +4,7 @@
 
 body {
   @apply bg-neutral-30;
-  @apply mx-8 my-32;
+  @apply mx-8 mb-32;
 }
 
 @layer base {
