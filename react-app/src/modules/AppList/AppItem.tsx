@@ -1,13 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, HeroIcon } from "@neo4j-ndl/react";
+import { Button } from "@neo4j-ndl/react";
 import React from "react";
 import Divider from "../../components/Divider";
 import { GraphAppItem } from "./graphApps";
-import {
-  solid,
-  regular,
-  brands,
-} from "@fortawesome/fontawesome-svg-core/import.macro";
+import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 
 interface Props {
   app: GraphAppItem;
