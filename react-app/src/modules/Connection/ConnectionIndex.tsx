@@ -15,6 +15,10 @@ function ConnectionIndex(props: Props) {
         Visualization and much more
       </div>
       {form}
+      <div className="text-sm italic">
+        This form is optional. Entering the database details here will prefill
+        the connection form in some of the apps below when you "Open".
+      </div>
     </div>
   );
 }

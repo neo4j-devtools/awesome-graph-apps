@@ -10,14 +10,14 @@ interface Props {
 function ConnectionForm(props: Props) {
   const { formValues, onChange } = props;
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8">
       {formFields.map((field) => {
         return (
           <Input
             onChange={onChange}
             key={field.name}
             label={field.label}
-            type={field.type || "text"}
+            type={"text"}
             name={field.name}
             value={formValues[field.name]}
           />

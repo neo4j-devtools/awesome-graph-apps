@@ -9,7 +9,7 @@ body {
 
 @layer base {
   .input-wrapper {
-    @apply inline-flex flex-col gap-y-1;
+    @apply inline-flex flex-col gap-y-1 text-sm font-bold;
   }
   input {
     @apply border border-neutral-50 rounded-md px-3 py-2;

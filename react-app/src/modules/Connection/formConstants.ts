@@ -12,13 +12,6 @@ export const formFields = [
     defaultValue: "neo4j",
   },
   {
-    name: "password",
-    label: "Password",
-    placeholder: "Enter database password",
-    defaultValue: "neo4j://localhost",
-    type: 'password'
-  },
-  {
     name: "database",
     label: "Database",
     placeholder: "Enter database name",
