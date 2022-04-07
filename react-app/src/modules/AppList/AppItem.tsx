@@ -33,10 +33,10 @@ function AppItem(props: Props) {
 
   const getAppUrl = (url: string) => {
     return url
-      .replace("$url", formValues.connectionUrl || "")
-      .replace("$username", formValues.username || "")
-      .replace("$password", formValues.password || "")
-      .replace("$database", formValues.database || "");
+      .replace("$url", encodeURIComponent(formValues.connectionUrl) || "")
+      .replace("$username", encodeURIComponent(formValues.username) || "")
+      .replace("$password", encodeURIComponent(formValues.password) || "")
+      .replace("$database", encodeURIComponent(formValues.database) || "");
   };
 
   return (
