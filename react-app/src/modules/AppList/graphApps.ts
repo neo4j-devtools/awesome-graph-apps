@@ -32,7 +32,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'neo4j-browser',
     name: 'Neo4j Browser',
-    baseUrl: 'https://browser.neo4j.io?connectURL=$url&db=$database',
+    baseUrl: 'https://browser.neo4j.io?dbms=$url&db=$database',
     author: 'Neo4j, Inc',
     description: 'A browser-based application for exploring Neo4j data.',
     logo: browserLogo,
@@ -116,7 +116,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'charts',
     name: 'Charts',
-    baseUrl: 'https://charts.graphapp.io',
+    baseUrl: 'https://charts.graphapp.io?url=$url&user=$username&pass=$password&database=$database',
     author: 'Adam Cowley (Neo4j)',
     description: 'Build Charts from your Graphs',
     logo: chartsLogo,
