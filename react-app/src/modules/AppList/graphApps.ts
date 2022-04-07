@@ -5,6 +5,7 @@ import graphGalleryLogo from '../../assets/images/graph-gallery.png'
 import neodashLogo from '../../assets/images/neodash-icon.png'
 import neulerLogo from '../../assets/images/neuler.png'
 import chartsLogo from '../../assets/images/charts-logo.png'
+import n10sLogo from '../../assets/images/neosemantics-icon.png'
 import graphXrLogo from '../../assets/images/graphxr.png'
 import yworksLogo from '../../assets/images/yworks.png'
 import neo4jCommanderLogo from '../../assets/images/commander.png'
@@ -124,6 +125,21 @@ const graphApps: GraphAppItem[] = [
       homepage: 'https://medium.com/neo4j/creating-charts-from-your-graphs-2f5b4e86fd6c',
       feedback: 'https://github.com/neo4j-labs/charts/issues',
       github: 'https://github.com/neo4j-labs/charts'
+    }
+  },
+  {
+    id: 'neosemantics',
+    name: 'Neosemantics UI',
+    baseUrl: 'https://n10s.graphapp.io/?url=$url&user=$username&pass=$password&database=$database',
+    author: 'Jesus Barrasa (Neo4j)',
+    description: 'RDF, Ontologies, Linked Data Toolkit',
+    logo: n10sLogo,
+    links: {
+      twitter: 'https://twitter.com/barrasadv',
+      homepage: 'https://neo4j.com/labs/neosemantics/',
+      feedback: 'https://github.com/neo4j-labs/neosemantics/issues',
+      docs:  'https://neo4j.com/labs/neosemantics/4.3/',
+      github: 'https://github.com/neo4j-labs/neosemantics'
     }
   },
   {
