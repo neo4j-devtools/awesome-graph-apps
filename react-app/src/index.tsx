@@ -4,6 +4,9 @@ import "@neo4j-ndl/base/lib/neo4j-ds-styles.css";
 import "./assets/style.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { URLPattern } from "urlpattern-polyfill";
+
+(window as any).URLPattern = URLPattern;
 
 ReactDOM.render(
   <React.StrictMode>
