@@ -4,6 +4,7 @@ import React from "react";
 import Divider from "../../components/Divider";
 import { GraphAppItem } from "./graphApps";
 import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { URLPattern, URLPatternInput } from "urlpattern-polyfill";
 
 interface Props {
   app: GraphAppItem;
@@ -32,11 +33,26 @@ function AppItem(props: Props) {
   const { app, formValues } = props;
 
   const getAppUrl = (url: string) => {
+    const connectUrlObject: URLPattern | null = new (window as any).URLPattern(
+      formValues.connectionUrl
+    )?.pattern;
+
     return url
-      .replace("$url", encodeURIComponent(formValues.connectionUrl) || "")
-      .replace("$username", encodeURIComponent(formValues.username) || "")
-      .replace("$password", encodeURIComponent(formValues.password) || "")
-      .replace("$database", encodeURIComponent(formValues.database) || "");
+      .replace(
+        "$protocol",
+        encodeURIComponent(connectUrlObject?.protocol || "neo4j")
+      )
+      .replace(
+        "$hostname",
+        encodeURIComponent(connectUrlObject?.hostname || "localhost")
+      )
+      .replace("$port", encodeURIComponent(connectUrlObject?.port || "7687"))
+      .replace(
+        "$url",
+        encodeURIComponent(formValues.connectionUrl) || "neo4j://localhost"
+      )
+      .replace("$username", encodeURIComponent(formValues.username) || "neo4j")
+      .replace("$database", encodeURIComponent(formValues.database) || "neo4j");
   };
 
   return (
