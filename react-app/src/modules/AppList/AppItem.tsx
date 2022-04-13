@@ -4,7 +4,7 @@ import React from "react";
 import Divider from "../../components/Divider";
 import { GraphAppItem } from "./graphApps";
 import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
-import { URLPattern, URLPatternInput } from "urlpattern-polyfill";
+import { URLPattern } from "urlpattern-polyfill";
 
 interface Props {
   app: GraphAppItem;

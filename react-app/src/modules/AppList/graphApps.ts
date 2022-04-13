@@ -28,11 +28,15 @@ export type GraphAppItem = {
   }
 }
 
+const colonSlash = encodeURIComponent('://');
+const colon = encodeURIComponent(':');
+const at = encodeURIComponent('@');
+
 const graphApps: GraphAppItem[] = [
   {
     id: 'neo4j-browser',
     name: 'Neo4j Browser',
-    baseUrl: 'https://browser.neo4j.io?connectURL=$url&db=$database',
+    baseUrl: `https://browser.neo4j.io?dbms=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
     author: 'Neo4j, Inc',
     description: 'A browser-based application for exploring Neo4j data.',
     logo: browserLogo,
@@ -49,7 +53,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'neo4j-bloom',
     name: 'Neo4j Bloom',
-    baseUrl: 'https://bloom.neo4j.io?connectURL=$url&db=$database',
+    baseUrl: `https://bloom.neo4j.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
     author: 'Neo4j, Inc',
     description: 'Visual no-code graph exploration tool.',
     logo: bloomLogo,
@@ -64,7 +68,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'neo4j-data-importer',
     name: 'Neo4j Data Importer',
-    baseUrl: 'https://data-importer.neo4j.io?dbms=$url&user=$username&pass=$password',
+    baseUrl: 'https://data-importer.neo4j.io?dbms=$url&user=$username',
     author: 'Neo4j, Inc',
     description: 'Model and import data from flat CSV files into Neo4j',
     logo: dataImporterLogo,
@@ -88,7 +92,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'neodash',
     name: 'NeoDash',
-    baseUrl: 'https://neodash.graphapp.io?dbms=$url&db=$database&user=$username',
+    baseUrl: `https://neodash.graphapp.io?$protocol${colonSlash}$username${at}$database${colon}$hostname${colon}$port`,
     author: 'Niels De Jong (Neo4j)',
     description: 'Neo4j Dashboard Builder',
     logo: neodashLogo,// 
@@ -102,7 +106,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'neuler',
     name: 'Graph Algorithms Playground',
-    baseUrl: 'https://neuler.graphapp.io?url=$url&username=$username&accessToken=$password',
+    baseUrl: 'https://neuler.graphapp.io?url=$url&username=$username',
     author: 'Neo4j Labs',
     description: 'Playground for Neo4j Graph Data Science',
     logo: neulerLogo,
@@ -116,7 +120,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'charts',
     name: 'Charts',
-    baseUrl: 'https://charts.graphapp.io',
+    baseUrl: 'https://charts.graphapp.io?url=$url&user=$username&database=$database',
     author: 'Adam Cowley (Neo4j)',
     description: 'Build Charts from your Graphs',
     logo: chartsLogo,
@@ -130,7 +134,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'neosemantics',
     name: 'Neosemantics UI',
-    baseUrl: 'https://n10s.graphapp.io/?url=$url&user=$username&pass=$password&database=$database',
+    baseUrl: 'https://n10s.graphapp.io/?url=$url&user=$username&database=$database',
     author: 'Jesus Barrasa (Neo4j)',
     description: 'RDF, Ontologies, Linked Data Toolkit',
     logo: n10sLogo,
