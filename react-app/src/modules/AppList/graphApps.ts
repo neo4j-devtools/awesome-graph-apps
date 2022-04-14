@@ -33,6 +33,7 @@ const colon = encodeURIComponent(':');
 const at = encodeURIComponent('@');
 
 const graphApps: GraphAppItem[] = [
+  /*
   {
     id: 'neo4j-browser',
     name: 'Neo4j Browser',
@@ -76,7 +77,7 @@ const graphApps: GraphAppItem[] = [
       changelog: 'https://neo4j-data-importer.canny.io/changelog',
       feedback: 'https://neo4j-data-importer.canny.io/feature-requests',
     }
-  },
+  },*/
   {
     id: 'graph-gallery',
     name: 'Graph Gallery',
