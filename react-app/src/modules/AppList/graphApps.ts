@@ -1,6 +1,8 @@
+/*
 import browserLogo from '../../assets/images/neo4j-browser-logo.svg';
 import bloomLogo from '../../assets/images/neo4j-bloom-logo.svg';
 import dataImporterLogo from '../../assets/images/neo4j-data-importer-logo.svg'
+*/
 import graphGalleryLogo from '../../assets/images/graph-gallery.png'
 import neodashLogo from '../../assets/images/neodash-icon.png'
 import neulerLogo from '../../assets/images/neuler.png'
