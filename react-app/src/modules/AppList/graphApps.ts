@@ -1,6 +1,8 @@
+/*
 import browserLogo from '../../assets/images/neo4j-browser-logo.svg';
 import bloomLogo from '../../assets/images/neo4j-bloom-logo.svg';
 import dataImporterLogo from '../../assets/images/neo4j-data-importer-logo.svg'
+*/
 import graphGalleryLogo from '../../assets/images/graph-gallery.png'
 import neodashLogo from '../../assets/images/neodash-icon.png'
 import neulerLogo from '../../assets/images/neuler.png'
@@ -33,6 +35,7 @@ const colon = encodeURIComponent(':');
 const at = encodeURIComponent('@');
 
 const graphApps: GraphAppItem[] = [
+  /*
   {
     id: 'neo4j-browser',
     name: 'Neo4j Browser',
@@ -76,7 +79,7 @@ const graphApps: GraphAppItem[] = [
       changelog: 'https://neo4j-data-importer.canny.io/changelog',
       feedback: 'https://neo4j-data-importer.canny.io/feature-requests',
     }
-  },
+  },*/
   {
     id: 'graph-gallery',
     name: 'Graph Gallery',
