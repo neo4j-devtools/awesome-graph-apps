@@ -6,6 +6,8 @@ import { GraphAppItem } from "./graphApps";
 import { solid, brands } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { URLPattern } from "urlpattern-polyfill";
 
+const PLUS_SIGN_REPLACEMENT = "plus";
+
 interface Props {
   app: GraphAppItem;
   formValues: any;
@@ -34,13 +36,15 @@ function AppItem(props: Props) {
 
   const getAppUrl = (url: string) => {
     const connectUrlObject: URLPattern | null = new (window as any).URLPattern(
-      formValues.connectionUrl
+      formValues.connectionUrl.replace("+", PLUS_SIGN_REPLACEMENT)
     )?.pattern;
+
+    console.log(connectUrlObject);
 
     return url
       .replace(
         "$protocol",
-        encodeURIComponent(connectUrlObject?.protocol || "neo4j")
+        encodeURIComponent(connectUrlObject?.protocol || "neo4j").replace(PLUS_SIGN_REPLACEMENT, '+')
       )
       .replace(
         "$hostname",
