@@ -44,7 +44,7 @@ function AppItem(props: Props) {
     return url
       .replace(
         "$protocol",
-        encodeURIComponent(connectUrlObject?.protocol || "neo4j").replace(PLUS_SIGN_REPLACEMENT, '+')
+        encodeURIComponent(connectUrlObject?.protocol || "neo4j").replace(PLUS_SIGN_REPLACEMENT, encodeURIComponent("+"))
       )
       .replace(
         "$hostname",
