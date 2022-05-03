@@ -95,7 +95,7 @@ const graphApps: GraphAppItem[] = [
   {
     id: 'neodash',
     name: 'NeoDash',
-    baseUrl: `https://neodash.graphapp.io?$protocol${colonSlash}$username${at}$database${colon}$hostname${colon}$port`,
+    baseUrl: `https://neodash.graphapp.io?share&credentials=$protocol${colonSlash}$username${at}$database${colon}$hostname${colon}$port`,
     author: 'Niels De Jong (Neo4j)',
     description: 'Neo4j Dashboard Builder',
     logo: neodashLogo,// 
