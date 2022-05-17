@@ -39,7 +39,6 @@ function AppItem(props: Props) {
       formValues.connectionUrl.replace("+", PLUS_SIGN_REPLACEMENT)
     )?.pattern;
 
-    console.log(connectUrlObject);
 
     return url
       .replace(
