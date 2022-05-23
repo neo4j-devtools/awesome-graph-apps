@@ -13,6 +13,7 @@ type ProductListingProps = {
 
 function AppListIndex(props: Props) {
   const { formValues } = props;
+  const search = new URLSearchParams(window.location.search);
 
   const ProductListing = (props: ProductListingProps) => (
     <div>
@@ -27,8 +28,8 @@ function AppListIndex(props: Props) {
 
   return (
     <div className="flex flex-col gap-y-16">
-      <ProductListing title="Neo4j Products" apps={neo4jApps} />
-      <ProductListing title="Ecosystem Products" apps={ecosystemApps} />
+      {["1", "true"].indexOf(search.get('showNeoProducts') as string) > -1 && <ProductListing title="Neo4j Products" apps={neo4jApps} />}
+      <ProductListing title="Ecosystem Tools" apps={ecosystemApps} />
     </div>
   );
 }
