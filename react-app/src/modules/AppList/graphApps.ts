@@ -1,8 +1,6 @@
-/*
 import browserLogo from '../../assets/images/neo4j-browser-logo.svg';
 import bloomLogo from '../../assets/images/neo4j-bloom-logo.svg';
 import dataImporterLogo from '../../assets/images/neo4j-data-importer-logo.svg'
-*/
 import graphGalleryLogo from '../../assets/images/graph-gallery.png'
 import neodashLogo from '../../assets/images/neodash-icon.png'
 import neulerLogo from '../../assets/images/neuler.png'
@@ -34,8 +32,7 @@ const colonSlash = encodeURIComponent('://');
 const colon = encodeURIComponent(':');
 const at = encodeURIComponent('@');
 
-const graphApps: GraphAppItem[] = [
-  /*
+export const neo4jApps: GraphAppItem[] = [
   {
     id: 'neo4j-browser',
     name: 'Neo4j Browser',
@@ -79,7 +76,11 @@ const graphApps: GraphAppItem[] = [
       changelog: 'https://neo4j-data-importer.canny.io/changelog',
       feedback: 'https://neo4j-data-importer.canny.io/feature-requests',
     }
-  },*/
+  },
+]
+
+export const ecosystemApps: GraphAppItem[] = [
+
   {
     id: 'graph-gallery',
     name: 'Graph Gallery',
@@ -145,7 +146,7 @@ const graphApps: GraphAppItem[] = [
       twitter: 'https://twitter.com/barrasadv',
       homepage: 'https://neo4j.com/labs/neosemantics/',
       feedback: 'https://github.com/neo4j-labs/neosemantics/issues',
-      docs:  'https://neo4j.com/labs/neosemantics/4.3/',
+      docs: 'https://neo4j.com/labs/neosemantics/4.3/',
       github: 'https://github.com/neo4j-labs/neosemantics'
     }
   },
@@ -186,5 +187,3 @@ const graphApps: GraphAppItem[] = [
     }
   },
 ]
-
-export default graphApps;

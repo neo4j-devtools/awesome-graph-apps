@@ -16,7 +16,6 @@ const getFormDefaultValues = () => {
 
 function App() {
   const [formValues, setFormValues] = useState<any>(getFormDefaultValues());
-  console.log(formValues);
 
   const handleChange = (event: any) => {
     setFormValues({
