@@ -35,12 +35,16 @@ function AppItem(props: Props) {
   const { app, formValues } = props;
 
   const getAppUrl = (url: string) => {
+
+    const isSecureConnection = formValues.connectionUrl && 
+      typeof formValues.connectionUrl === 'string' && (formValues.connectionUrl.split(":")[0]).indexOf('+s') > -1;
+
     const connectUrlObject: URLPattern | null = new (window as any).URLPattern(
       formValues.connectionUrl.replace("+", PLUS_SIGN_REPLACEMENT)
     )?.pattern;
 
-
     return url
+      .replace("$appUrlProtocol", isSecureConnection ? "https" : "http")
       .replace(
         "$protocol",
         encodeURIComponent(connectUrlObject?.protocol || "neo4j").replace(PLUS_SIGN_REPLACEMENT, encodeURIComponent("+"))
