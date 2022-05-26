@@ -18,6 +18,7 @@ export type GraphAppItem = {
   author: string;
   logo: string;
   baseUrl: string;
+  unsecureBaseUrl?: string;
   links: {
     github?: string;
     docs?: string;
@@ -37,6 +38,7 @@ export const neo4jApps: GraphAppItem[] = [
     id: 'neo4j-browser',
     name: 'Neo4j Browser',
     baseUrl: `$appUrlProtocol://browser.neo4j.io?dbms=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
+    unsecureBaseUrl: `$appUrlProtocol://browser.graphapp.io?dbms=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
     author: 'Neo4j, Inc',
     description: 'A browser-based application for exploring Neo4j data.',
     logo: browserLogo,
@@ -69,6 +71,7 @@ export const neo4jApps: GraphAppItem[] = [
     id: 'neo4j-data-importer',
     name: 'Neo4j Data Importer',
     baseUrl: '$appUrlProtocol://data-importer.neo4j.io?dbms=$url&user=$username',
+    unsecureBaseUrl: '$appUrlProtocol://data-importer.graphapp.io?dbms=$url&user=$username',
     author: 'Neo4j, Inc',
     description: 'Model and import data from flat CSV files into Neo4j',
     logo: dataImporterLogo,
