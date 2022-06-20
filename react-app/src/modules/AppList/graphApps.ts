@@ -18,6 +18,7 @@ export type GraphAppItem = {
   author: string;
   logo: string;
   baseUrl: string;
+  unsecureBaseUrl?: string;
   links: {
     github?: string;
     docs?: string;
@@ -36,7 +37,8 @@ export const neo4jApps: GraphAppItem[] = [
   {
     id: 'neo4j-browser',
     name: 'Neo4j Browser',
-    baseUrl: `https://browser.neo4j.io?dbms=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
+    baseUrl: `$appUrlProtocol://browser.neo4j.io?dbms=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
+    unsecureBaseUrl: `$appUrlProtocol://browser.graphapp.io?dbms=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
     author: 'Neo4j, Inc',
     description: 'A browser-based application for exploring Neo4j data.',
     logo: browserLogo,
@@ -53,7 +55,7 @@ export const neo4jApps: GraphAppItem[] = [
   {
     id: 'neo4j-bloom',
     name: 'Neo4j Bloom',
-    baseUrl: `https://bloom.neo4j.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
+    baseUrl: `$appUrlProtocol://bloom.neo4j.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
     author: 'Neo4j, Inc',
     description: 'Visual no-code graph exploration tool.',
     logo: bloomLogo,
@@ -68,7 +70,8 @@ export const neo4jApps: GraphAppItem[] = [
   {
     id: 'neo4j-data-importer',
     name: 'Neo4j Data Importer',
-    baseUrl: 'https://data-importer.neo4j.io?dbms=$url&user=$username',
+    baseUrl: '$appUrlProtocol://data-importer.neo4j.io?dbms=$url&user=$username',
+    unsecureBaseUrl: '$appUrlProtocol://data-importer.graphapp.io?dbms=$url&user=$username',
     author: 'Neo4j, Inc',
     description: 'Model and import data from flat CSV files into Neo4j',
     logo: dataImporterLogo,
@@ -84,7 +87,7 @@ export const ecosystemApps: GraphAppItem[] = [
   {
     id: 'graph-gallery',
     name: 'Graph Gallery',
-    baseUrl: 'https://portal.graphgist.org',
+    baseUrl: '$appUrlProtocol://portal.graphgist.org',
     author: 'Neo4j Labs',
     description: 'Interactive Graph Examples',
     logo: graphGalleryLogo,
@@ -96,7 +99,7 @@ export const ecosystemApps: GraphAppItem[] = [
   {
     id: 'neodash',
     name: 'NeoDash',
-    baseUrl: `https://neodash.graphapp.io?share&credentials=$protocol${colonSlash}$username${at}$database${colon}$hostname${colon}$port`,
+    baseUrl: `$appUrlProtocol://neodash.graphapp.io?share&credentials=$protocol${colonSlash}$username${at}$database${colon}$hostname${colon}$port`,
     author: 'Niels De Jong (Neo4j)',
     description: 'Neo4j Dashboard Builder',
     logo: neodashLogo,// 
@@ -110,7 +113,7 @@ export const ecosystemApps: GraphAppItem[] = [
   {
     id: 'neuler',
     name: 'Graph Algorithms Playground',
-    baseUrl: 'https://neuler.graphapp.io?url=$url&username=$username',
+    baseUrl: '$appUrlProtocol://neuler.graphapp.io?url=$url&username=$username',
     author: 'Neo4j Labs',
     description: 'Playground for Neo4j Graph Data Science',
     logo: neulerLogo,
@@ -124,7 +127,7 @@ export const ecosystemApps: GraphAppItem[] = [
   {
     id: 'charts',
     name: 'Charts',
-    baseUrl: 'https://charts.graphapp.io?url=$url&user=$username&database=$database',
+    baseUrl: '$appUrlProtocol://charts.graphapp.io?url=$url&user=$username&database=$database',
     author: 'Adam Cowley (Neo4j)',
     description: 'Build Charts from your Graphs',
     logo: chartsLogo,
@@ -138,7 +141,7 @@ export const ecosystemApps: GraphAppItem[] = [
   {
     id: 'neosemantics',
     name: 'Neosemantics UI',
-    baseUrl: 'https://n10s.graphapp.io/?url=$url&user=$username&database=$database',
+    baseUrl: '$appUrlProtocol://n10s.graphapp.io/?url=$url&user=$username&database=$database',
     author: 'Jesus Barrasa (Neo4j)',
     description: 'RDF, Ontologies, Linked Data Toolkit',
     logo: n10sLogo,
@@ -153,7 +156,7 @@ export const ecosystemApps: GraphAppItem[] = [
   {
     id: 'graphxr',
     name: 'GraphXR',
-    baseUrl: 'https://graphxr.kineviz.com/',
+    baseUrl: '$appUrlProtocol://graphxr.kineviz.com/',
     author: 'Kineviz',
     description: 'GraphXR is a browser-based visualization tool.',
     logo: graphXrLogo,
@@ -165,7 +168,7 @@ export const ecosystemApps: GraphAppItem[] = [
   {
     id: 'yfiles-explorer',
     name: 'yFiles Neo4j Explorer',
-    baseUrl: 'https://www.yworks.com/neo4j-explorer/',
+    baseUrl: '$appUrlProtocol://www.yworks.com/neo4j-explorer/',
     author: 'yWorks',
     description: 'Explore your Neo4j database',
     logo: yworksLogo,
@@ -177,7 +180,7 @@ export const ecosystemApps: GraphAppItem[] = [
   {
     id: 'neo4jcommander',
     name: 'Neo4j Commander 3',
-    baseUrl: 'https://neo4jcommander.com/',
+    baseUrl: '$appUrlProtocol://neo4jcommander.com/',
     author: 'Netbiz Global',
     description: 'Edit, Clone, Merge, Calculate, Undo, Bookmarks, Export and much more',
     logo: neo4jCommanderLogo,

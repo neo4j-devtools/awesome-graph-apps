@@ -34,13 +34,17 @@ const LinkIconHtml = (props: LinkIconHtmlProps) => (
 function AppItem(props: Props) {
   const { app, formValues } = props;
 
+  const isSecureConnection = formValues.connectionUrl && 
+      typeof formValues.connectionUrl === 'string' && (formValues.connectionUrl.split(":")[0]).indexOf('+s') > -1;
+
   const getAppUrl = (url: string) => {
+
     const connectUrlObject: URLPattern | null = new (window as any).URLPattern(
       formValues.connectionUrl.replace("+", PLUS_SIGN_REPLACEMENT)
     )?.pattern;
 
-
     return url
+      .replace("$appUrlProtocol", isSecureConnection ? "https" : "http")
       .replace(
         "$protocol",
         encodeURIComponent(connectUrlObject?.protocol || "neo4j").replace(PLUS_SIGN_REPLACEMENT, encodeURIComponent("+"))
@@ -128,7 +132,7 @@ function AppItem(props: Props) {
       </div>
       <div className="flex flex-col gap-y-4 p-8 py-4 pb-8">
         <div>
-          <Button fill="outlined" href={getAppUrl(app.baseUrl)} target="_blank">
+          <Button fill="outlined" href={getAppUrl((isSecureConnection || !app.unsecureBaseUrl) ? app.baseUrl : app.unsecureBaseUrl)} target="_blank">
             Open
           </Button>
         </div>
