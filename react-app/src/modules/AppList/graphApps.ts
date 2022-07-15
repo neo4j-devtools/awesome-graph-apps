@@ -9,7 +9,8 @@ import n10sLogo from '../../assets/images/neosemantics-icon.png'
 import graphXrLogo from '../../assets/images/graphxr.png'
 import yworksLogo from '../../assets/images/yworks.png'
 import neo4jCommanderLogo from '../../assets/images/commander.png'
-
+import queryAnalyzerLogo from '../../assets/images/qloganalyzer_icon.png'
+import dbAnalyzerLogo from '../../assets/images/dbcountreport_icon.png'
 
 export type GraphAppItem = {
   id: string;
@@ -125,20 +126,6 @@ export const ecosystemApps: GraphAppItem[] = [
     }
   },
   {
-    id: 'charts',
-    name: 'Charts',
-    baseUrl: '$appUrlProtocol://charts.graphapp.io?url=$url&user=$username&database=$database',
-    author: 'Adam Cowley (Neo4j)',
-    description: 'Build Charts from your Graphs',
-    logo: chartsLogo,
-    links: {
-      twitter: 'https://twitter.com/adamcowley',
-      homepage: 'https://medium.com/neo4j/creating-charts-from-your-graphs-2f5b4e86fd6c',
-      feedback: 'https://github.com/neo4j-labs/charts/issues',
-      github: 'https://github.com/neo4j-labs/charts'
-    }
-  },
-  {
     id: 'neosemantics',
     name: 'Neosemantics UI',
     baseUrl: '$appUrlProtocol://n10s.graphapp.io/?url=$url&user=$username&database=$database',
@@ -151,6 +138,48 @@ export const ecosystemApps: GraphAppItem[] = [
       feedback: 'https://github.com/neo4j-labs/neosemantics/issues',
       docs: 'https://neo4j.com/labs/neosemantics/4.3/',
       github: 'https://github.com/neo4j-labs/neosemantics'
+    }
+  },
+  {
+    id: 'query-analyzer',
+    name: 'Query Log Analyzer',
+    baseUrl: '$appUrlProtocol://queryloganalyzer.graphapp.io?url=$url&user=$username&database=$database',
+    author: 'Kees Vegter (Neo4j)',
+    description: 'Analyze and Visualize your Query Log Files',
+    logo: queryAnalyzerLogo,
+    links: {
+      twitter: 'https://medium.com/@kees.vegter',
+      homepage: 'https://medium.com/neo4j/neo4j-4-x-query-logging-enhancements-7943d7f4ac7f',
+      feedback: 'https://github.com/kvegter/query-analyzer-app/issues',
+      github: 'https://github.com/kvegter/query-analyzer-app'
+    }
+  },
+  {
+    id: 'db-analyzer',
+    name: 'Database Analyzer',
+    baseUrl: '$appUrlProtocol://databaseanalyzer.graphapp.io/?url=$url&user=$username&database=$database',
+    author: 'Kees Vegter (Neo4j)',
+    description: 'Analyze and Visualize your Graph Data Model',
+    logo: dbAnalyzerLogo,
+    links: {
+      twitter: 'https://medium.com/@kees.vegter',
+      homepage: 'https://medium.com/neo4j/neo4j-query-log-analyzer-and-db-analyzer-update-for-neo4j-4-0-with-new-features-181081a464a7',
+      feedback: 'https://github.com/kvegter/dbreportapp/issues',
+      github: 'https://github.com/kvegter/dbreportapp'
+    }
+  },
+  {
+    id: 'charts',
+    name: 'Charts',
+    baseUrl: '$appUrlProtocol://charts.graphapp.io?url=$url&user=$username&database=$database',
+    author: 'Adam Cowley (Neo4j)',
+    description: 'Build Charts from your Graphs',
+    logo: chartsLogo,
+    links: {
+      twitter: 'https://twitter.com/adamcowley',
+      homepage: 'https://medium.com/neo4j/creating-charts-from-your-graphs-2f5b4e86fd6c',
+      feedback: 'https://github.com/neo4j-labs/charts/issues',
+      github: 'https://github.com/neo4j-labs/charts'
     }
   },
   {
