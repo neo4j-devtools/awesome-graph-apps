@@ -85,8 +85,8 @@ export const neo4jApps: GraphAppItem[] = [
   {
     id: 'neo4j-graphql-toolbox',
     name: 'Neo4j GraphQL Toolbox',
-    baseUrl: 'https://graphql-toolbox.neo4j.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database',
-    unsecureBaseUrl: '$appUrlProtocol://graphql-toolbox.graphapp.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database',
+    baseUrl: `https://graphql-toolbox.neo4j.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
+    unsecureBaseUrl: `$appUrlProtocol://graphql-toolbox.graphapp.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
     author: 'Neo4j, Inc',
     description: 'Build (Generate) and Query Neo4j Backed GraphQL APIs in your Browser',
     logo: graphqlToolboxLogo,
