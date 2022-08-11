@@ -1,6 +1,7 @@
 import browserLogo from '../../assets/images/neo4j-browser-logo.svg';
 import bloomLogo from '../../assets/images/neo4j-bloom-logo.svg';
 import dataImporterLogo from '../../assets/images/neo4j-data-importer-logo.svg'
+import graphqlToolboxLogo from '../../assets/images/neo4j-graphql-toolbox-logo.png'
 import graphGalleryLogo from '../../assets/images/graph-gallery.png'
 import neodashLogo from '../../assets/images/neodash-icon.png'
 import neulerLogo from '../../assets/images/neuler.png'
@@ -56,7 +57,7 @@ export const neo4jApps: GraphAppItem[] = [
   {
     id: 'neo4j-bloom',
     name: 'Neo4j Bloom',
-    baseUrl: `$appUrlProtocol://bloom.neo4j.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
+    baseUrl: `https://bloom.neo4j.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
     author: 'Neo4j, Inc',
     description: 'Visual no-code graph exploration tool.',
     logo: bloomLogo,
@@ -79,6 +80,20 @@ export const neo4jApps: GraphAppItem[] = [
     links: {
       changelog: 'https://neo4j-data-importer.canny.io/changelog',
       feedback: 'https://neo4j-data-importer.canny.io/feature-requests',
+    }
+  },
+  {
+    id: 'neo4j-graphql-toolbox',
+    name: 'Neo4j GraphQL Toolbox',
+    baseUrl: `https://graphql-toolbox.neo4j.io?connectURL=$protocol${colonSlash}$username${at}$hostname${colon}$port&db=$database`,
+    author: 'Neo4j, Inc',
+    description: 'Build (Generate) and Query Neo4j Backed GraphQL APIs in your Browser',
+    logo: graphqlToolboxLogo,
+    links: {
+      github: 'https://github.com/neo4j/graphql/tree/dev/packages/graphql-toolbox',
+      docs: 'https://neo4j.com/docs/graphql-manual/current/toolbox/',
+      changelog: 'https://github.com/neo4j/graphql/releases',
+      feedback: 'https://feedback.neo4j.com/graphql',
     }
   },
 ]
